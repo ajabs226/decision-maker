@@ -1,0 +1,46 @@
+import java.time.temporal.ValueRange;
+
+import java.util.Scanner;
+
+public class DecisionMaking {
+
+	public static void main(String[] args) {
+
+    // TODO Auto-generated method stub
+
+    Scanner scnr = new Scanner(System.in);
+    ValueRange range = ValueRange.of(2, 25);
+    ValueRange range2 = ValueRange.of(26, 60);
+    ValueRange range3 = ValueRange.of(61, 100);
+    ValueRange range4 = ValueRange.of(60, 100);
+
+    System.out.println("What is your name?");
+    String name = scnr.next();
+    if (name.matches("^[a-zA-Z]*$")) {
+    	System.out.println("Hello, " + name +"!");
+    } else {
+        System.out.println("Please enter a valid name.");
+        return;
+    }
+
+    System.out.println("Enter a number between 1 and 100");
+    int number = scnr.nextInt();
+    if (number <=0 || number > 100 && number == scnr.nextInt()) {
+    	System.out.println("Not a valid number.");
+        return;
+        }
+    if (!(number % 2 == 0) && number < 60){
+        System.out.println(number + " and odd.");
+        } else if (!(number % 2 == 0) && number > 60)  {
+        	System.out.println(number + " is odd and over 60.");
+        } else if (number % 2 == 0 && number >=2 && number <25) {
+        	System.out.println("even");
+        }
+
+                       
+
+ 
+
+            }
+
+}
